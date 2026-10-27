@@ -1,0 +1,1 @@
+build-Debug/NodoPila.cpp.o build-Debug/NodoLista.cpp.o build-Debug/Pila.cpp.o build-Debug/Paciente.cpp.o build-Debug/NodoCola.cpp.o build-Debug/Lista.cpp.o build-Debug/Cola.cpp.o build-Debug/main.cpp.o build-Debug/Controlador.cpp.o   

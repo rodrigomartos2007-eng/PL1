@@ -1,16 +1,34 @@
 #include "Controlador.hpp"
 #include <iostream>
+#include <algorithm>
+#include <random>
 
 using namespace std;
 
 Controlador::Controlador() {
-    contadorIdApendicitis = 1;
-    contadorHabitacionApendicitis = 101;
-    contadorIdHernias = 51;
-    contadorHabitacionHernias = 201;
+    reiniciarNumerosAleatorios();
 }
 
 Controlador::~Controlador() {}
+
+void Controlador::reiniciarNumerosAleatorios() {
+    idsApendicitis.clear();
+    habsApendicitis.clear();
+    idsHernias.clear();
+    habsHernias.clear();
+
+    for(int i = 1; i <= 49; i++) idsApendicitis.push_back(i);
+    for(int i = 101; i <= 199; i++) habsApendicitis.push_back(i);
+    for(int i = 51; i <= 99; i++) idsHernias.push_back(i);
+    for(int i = 201; i <= 299; i++) habsHernias.push_back(i);
+
+    random_device rd;
+    mt19937 g(rd());
+    shuffle(idsApendicitis.begin(), idsApendicitis.end(), g);
+    shuffle(habsApendicitis.begin(), habsApendicitis.end(), g);
+    shuffle(idsHernias.begin(), idsHernias.end(), g);
+    shuffle(habsHernias.begin(), habsHernias.end(), g);
+}
 
 int Controlador::pacientesEnPila() { return pilaPacientes.getLongitud(); }
 int Controlador::pacientesEnSalaA() { return salaA.getLongitud(); }
@@ -42,16 +60,20 @@ void Controlador::opcionD_pasarAColas() {
         Paciente p = pilaPacientes.extraer();
 
         if (p.tieneApendicitis()) {
-            p.setId(contadorIdApendicitis++);
-            p.setHabitacion(contadorHabitacionApendicitis++);
+            if (!idsApendicitis.empty() && !habsApendicitis.empty()) {
+                p.setId(idsApendicitis.back()); idsApendicitis.pop_back();
+                p.setHabitacion(habsApendicitis.back()); habsApendicitis.pop_back();
+            }
             if (salaA.getLongitud() <= salaB.getLongitud()) {
                 salaA.insertar(p);
             } else {
                 salaB.insertar(p);
             }
         } else {
-            p.setId(contadorIdHernias++);
-            p.setHabitacion(contadorHabitacionHernias++);
+            if (!idsHernias.empty() && !habsHernias.empty()) {
+                p.setId(idsHernias.back()); idsHernias.pop_back();
+                p.setHabitacion(habsHernias.back()); habsHernias.pop_back();
+            }
             if (salaC.getLongitud() <= salaD.getLongitud()) {
                 salaC.insertar(p);
             } else {
@@ -83,22 +105,10 @@ void Controlador::opcionG_borrarSalas() {
 }
 
 void Controlador::opcionH_pasarAListas() {
-    while (salaA.getLongitud() > 0) {
-        Paciente p = salaA.eliminar();
-        quirofanoApendicitis.insertar(p);
-    }
-    while (salaB.getLongitud() > 0) {
-        Paciente p = salaB.eliminar();
-        quirofanoApendicitis.insertar(p);
-    }
-    while (salaC.getLongitud() > 0) {
-        Paciente p = salaC.eliminar();
-        quirofanoHernias.insertar(p);
-    }
-    while (salaD.getLongitud() > 0) {
-        Paciente p = salaD.eliminar();
-        quirofanoHernias.insertar(p);
-    }
+    while (salaA.getLongitud() > 0) quirofanoApendicitis.insertar(salaA.eliminar());
+    while (salaB.getLongitud() > 0) quirofanoApendicitis.insertar(salaB.eliminar());
+    while (salaC.getLongitud() > 0) quirofanoHernias.insertar(salaC.eliminar());
+    while (salaD.getLongitud() > 0) quirofanoHernias.insertar(salaD.eliminar());
 }
 
 void Controlador::opcionI_mostrarQuirofanoApendicitis() {
@@ -124,9 +134,5 @@ void Controlador::opcionL_reiniciar() {
     salaD.vaciar();
     quirofanoApendicitis.vaciar();
     quirofanoHernias.vaciar();
-
-    contadorIdApendicitis = 1;
-    contadorHabitacionApendicitis = 101;
-    contadorIdHernias = 51;
-    contadorHabitacionHernias = 201;
+    reiniciarNumerosAleatorios();
 }

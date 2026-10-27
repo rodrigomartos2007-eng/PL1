@@ -6,16 +6,16 @@
 ProjectName            :=PECLMartosLagunaRodrigo
 ConfigurationName      :=Debug
 WorkspaceConfiguration :=Debug
-WorkspacePath          :=C:/UAH/Segundo/EstructurasDeDatos/ESTRUCTURADEDATOS/PECL1
-ProjectPath            :=C:/UAH/Segundo/EstructurasDeDatos/ESTRUCTURADEDATOS/PECL1/PECLMartosLagunaRodrigo
-IntermediateDirectory  :=../build-$(WorkspaceConfiguration)/PECLMartosLagunaRodrigo
+WorkspacePath          :=C:/UAH/EstructuraDeDatos/PL1/PL1-main/PL1-main
+ProjectPath            :=C:/UAH/EstructuraDeDatos/PL1/PL1-main/PL1-main
+IntermediateDirectory  :=build-$(WorkspaceConfiguration)
 OutDir                 :=$(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=Rodri
-Date                   :=10/21/2026
-CodeLitePath           :=C:/UAH/Segundo/EstructurasDeDatos/codelite-amd64-17.0.0/codelite
+User                   :=Rodrigo Lopez
+Date                   :=10/27/2026
+CodeLitePath           :="C:/Users/Rodrigo Lopez/Desktop/codelite-amd64-17.0.0/codelite"
 MakeDirCommand         :=mkdir
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -29,8 +29,8 @@ OutputSwitch           :=-o
 LibraryPathSwitch      :=-L
 PreprocessorSwitch     :=-D
 SourceSwitch           :=-c 
-OutputDirectory        :=C:/UAH/Segundo/EstructurasDeDatos/ESTRUCTURADEDATOS/PECL1/build-$(WorkspaceConfiguration)/bin
-OutputFile             :=..\build-$(WorkspaceConfiguration)\bin\$(ProjectName).exe
+OutputDirectory        :=C:/UAH/EstructuraDeDatos/PL1/PL1-main/PL1-main/build-$(WorkspaceConfiguration)/bin
+OutputFile             :=build-$(WorkspaceConfiguration)\bin\$(ProjectName).exe
 Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
@@ -63,8 +63,8 @@ AS       := as
 ##
 ## User defined environment variables
 ##
-CodeLiteDir:=C:\Users\Rodri\OneDrive\Escritorio\codelite-amd64-17.0.0\codelite
-Objects0=$(IntermediateDirectory)/NodoPila.cpp$(ObjectSuffix) $(IntermediateDirectory)/Pila.cpp$(ObjectSuffix) $(IntermediateDirectory)/Cola.cpp$(ObjectSuffix) $(IntermediateDirectory)/NodoLista.cpp$(ObjectSuffix) $(IntermediateDirectory)/Controlador.cpp$(ObjectSuffix) $(IntermediateDirectory)/NodoCola.cpp$(ObjectSuffix) $(IntermediateDirectory)/Lista.cpp$(ObjectSuffix) $(IntermediateDirectory)/Paciente.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+CodeLiteDir:=C:\Programas\codelite-amd64-17.0.0\codelite-amd64-17.0.0\codelite
+Objects0=$(IntermediateDirectory)/NodoPila.cpp$(ObjectSuffix) $(IntermediateDirectory)/NodoLista.cpp$(ObjectSuffix) $(IntermediateDirectory)/Pila.cpp$(ObjectSuffix) $(IntermediateDirectory)/Paciente.cpp$(ObjectSuffix) $(IntermediateDirectory)/NodoCola.cpp$(ObjectSuffix) $(IntermediateDirectory)/Lista.cpp$(ObjectSuffix) $(IntermediateDirectory)/Cola.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Controlador.cpp$(ObjectSuffix) 
 
 
 
@@ -96,49 +96,49 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/NodoPila.cpp$(ObjectSuffix): NodoPila.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/Segundo/EstructurasDeDatos/ESTRUCTURADEDATOS/PECL1/PECLMartosLagunaRodrigo/NodoPila.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/NodoPila.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/EstructuraDeDatos/PL1/PL1-main/PL1-main/NodoPila.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/NodoPila.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/NodoPila.cpp$(PreprocessSuffix): NodoPila.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/NodoPila.cpp$(PreprocessSuffix) NodoPila.cpp
 
-$(IntermediateDirectory)/Pila.cpp$(ObjectSuffix): Pila.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/Segundo/EstructurasDeDatos/ESTRUCTURADEDATOS/PECL1/PECLMartosLagunaRodrigo/Pila.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Pila.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Pila.cpp$(PreprocessSuffix): Pila.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Pila.cpp$(PreprocessSuffix) Pila.cpp
-
-$(IntermediateDirectory)/Cola.cpp$(ObjectSuffix): Cola.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/Segundo/EstructurasDeDatos/ESTRUCTURADEDATOS/PECL1/PECLMartosLagunaRodrigo/Cola.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Cola.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Cola.cpp$(PreprocessSuffix): Cola.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Cola.cpp$(PreprocessSuffix) Cola.cpp
-
 $(IntermediateDirectory)/NodoLista.cpp$(ObjectSuffix): NodoLista.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/Segundo/EstructurasDeDatos/ESTRUCTURADEDATOS/PECL1/PECLMartosLagunaRodrigo/NodoLista.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/NodoLista.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/EstructuraDeDatos/PL1/PL1-main/PL1-main/NodoLista.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/NodoLista.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/NodoLista.cpp$(PreprocessSuffix): NodoLista.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/NodoLista.cpp$(PreprocessSuffix) NodoLista.cpp
 
-$(IntermediateDirectory)/Controlador.cpp$(ObjectSuffix): Controlador.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/Segundo/EstructurasDeDatos/ESTRUCTURADEDATOS/PECL1/PECLMartosLagunaRodrigo/Controlador.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Controlador.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Controlador.cpp$(PreprocessSuffix): Controlador.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Controlador.cpp$(PreprocessSuffix) Controlador.cpp
+$(IntermediateDirectory)/Pila.cpp$(ObjectSuffix): Pila.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/EstructuraDeDatos/PL1/PL1-main/PL1-main/Pila.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Pila.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Pila.cpp$(PreprocessSuffix): Pila.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Pila.cpp$(PreprocessSuffix) Pila.cpp
+
+$(IntermediateDirectory)/Paciente.cpp$(ObjectSuffix): Paciente.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/EstructuraDeDatos/PL1/PL1-main/PL1-main/Paciente.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Paciente.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Paciente.cpp$(PreprocessSuffix): Paciente.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Paciente.cpp$(PreprocessSuffix) Paciente.cpp
 
 $(IntermediateDirectory)/NodoCola.cpp$(ObjectSuffix): NodoCola.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/Segundo/EstructurasDeDatos/ESTRUCTURADEDATOS/PECL1/PECLMartosLagunaRodrigo/NodoCola.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/NodoCola.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/EstructuraDeDatos/PL1/PL1-main/PL1-main/NodoCola.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/NodoCola.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/NodoCola.cpp$(PreprocessSuffix): NodoCola.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/NodoCola.cpp$(PreprocessSuffix) NodoCola.cpp
 
 $(IntermediateDirectory)/Lista.cpp$(ObjectSuffix): Lista.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/Segundo/EstructurasDeDatos/ESTRUCTURADEDATOS/PECL1/PECLMartosLagunaRodrigo/Lista.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Lista.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/EstructuraDeDatos/PL1/PL1-main/PL1-main/Lista.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Lista.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Lista.cpp$(PreprocessSuffix): Lista.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Lista.cpp$(PreprocessSuffix) Lista.cpp
 
-$(IntermediateDirectory)/Paciente.cpp$(ObjectSuffix): Paciente.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/Segundo/EstructurasDeDatos/ESTRUCTURADEDATOS/PECL1/PECLMartosLagunaRodrigo/Paciente.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Paciente.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Paciente.cpp$(PreprocessSuffix): Paciente.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Paciente.cpp$(PreprocessSuffix) Paciente.cpp
+$(IntermediateDirectory)/Cola.cpp$(ObjectSuffix): Cola.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/EstructuraDeDatos/PL1/PL1-main/PL1-main/Cola.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Cola.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Cola.cpp$(PreprocessSuffix): Cola.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Cola.cpp$(PreprocessSuffix) Cola.cpp
 
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/Segundo/EstructurasDeDatos/ESTRUCTURADEDATOS/PECL1/PECLMartosLagunaRodrigo/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/EstructuraDeDatos/PL1/PL1-main/PL1-main/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
+$(IntermediateDirectory)/Controlador.cpp$(ObjectSuffix): Controlador.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UAH/EstructuraDeDatos/PL1/PL1-main/PL1-main/Controlador.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Controlador.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Controlador.cpp$(PreprocessSuffix): Controlador.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Controlador.cpp$(PreprocessSuffix) Controlador.cpp
 
 ##
 ## Clean

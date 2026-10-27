@@ -4,6 +4,7 @@
 #include "Pila.hpp"
 #include "Cola.hpp"
 #include "Lista.hpp"
+#include <vector>
 
 class Controlador {
 public:
@@ -40,10 +41,12 @@ private:
     Lista quirofanoApendicitis;
     Lista quirofanoHernias;
 
-    int contadorIdApendicitis;
-    int contadorIdHernias;
-    int contadorHabitacionApendicitis;
-    int contadorHabitacionHernias;
+    std::vector<int> idsApendicitis;
+    std::vector<int> idsHernias;
+    std::vector<int> habsApendicitis;
+    std::vector<int> habsHernias;
+    
+    void reiniciarNumerosAleatorios();
 };
 
 #endif
